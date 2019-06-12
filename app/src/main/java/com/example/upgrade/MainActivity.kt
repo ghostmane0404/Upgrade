@@ -13,6 +13,7 @@ import androidx.appcompat.widget.Toolbar
 import android.view.Menu
 import com.example.upgrade.home.HomeFragment
 import com.example.upgrade.notes.NotesFragment
+import com.example.upgrade.weather.WeatherFragment
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -34,8 +35,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val transaction = manager.beginTransaction()
         transaction.replace(R.id.changeble, home_fragment)
         transaction.commit()
-    }
 
+    }
     override fun onBackPressed() {
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
@@ -75,7 +76,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             }
             R.id.nav_weather -> {
-
+                manager.beginTransaction().addToBackStack(null).replace(R.id.changeble,WeatherFragment()).commit()
             }
             R.id.nav_notes -> {
             val transaction = manager.beginTransaction()
