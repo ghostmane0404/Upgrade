@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import com.example.upgrade.R
 
 class NotesFragment: Fragment(),NotesContract.NoteView {
+    val TAG = "NotesFragment"
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
     }

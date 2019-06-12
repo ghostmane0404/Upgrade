@@ -11,16 +11,17 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
+import com.example.upgrade.home.HomeFragment
+import com.example.upgrade.notes.NotesFragment
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-
+    val manager = supportFragmentManager
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
-
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
         val toggle = ActionBarDrawerToggle(
@@ -28,8 +29,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         )
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
-
         navView.setNavigationItemSelectedListener(this)
+        val home_fragment = HomeFragment()
+        val transaction = manager.beginTransaction()
+        transaction.replace(R.id.changeble, home_fragment)
+        transaction.commit()
     }
 
     override fun onBackPressed() {
@@ -61,7 +65,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_home -> {
-
+            val transaction = manager.beginTransaction()
+                val fragment = HomeFragment()
+                transaction.replace(R.id.changeble,fragment)
+                transaction.addToBackStack(null)
+                transaction.commit()
             }
             R.id.nav_tracker -> {
 
@@ -70,7 +78,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             }
             R.id.nav_notes -> {
-
+            val transaction = manager.beginTransaction()
+                val fragment  = NotesFragment()
+                transaction.replace(R.id.changeble,fragment)
+                transaction.addToBackStack(null)
+                transaction.commit()
             }
             R.id.nav_room -> {
 
