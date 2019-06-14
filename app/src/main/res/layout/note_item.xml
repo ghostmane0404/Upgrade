@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:id="@+id/item"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/noteLabel"
+                    android:textSize="24sp"
+                    android:padding="10dp"
+                    android:textAllCaps="true"
+                    android:text="This is the label"
+                    android:font="@font/roboto_medium"
+                    android:layout_height="wrap_content"
+            />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/noteText"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:padding="10dp"
+                android:font="@font/roboto_medium"
+                android:text="this my note about something i dnot know"
+            />
+</LinearLayout>

@@ -17,7 +17,7 @@ import com.example.upgrade.weather.WeatherFragment
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-    val manager = supportFragmentManager
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -32,11 +32,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
         navView.setNavigationItemSelectedListener(this)
         val home_fragment = HomeFragment()
-        val transaction = manager.beginTransaction()
-        transaction.replace(R.id.changeble, home_fragment)
-        transaction.commit()
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.changeble, home_fragment)
+            .commit()
 
     }
+
     override fun onBackPressed() {
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
@@ -66,24 +68,25 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_home -> {
-            val transaction = manager.beginTransaction()
-                val fragment = HomeFragment()
-                transaction.replace(R.id.changeble,fragment)
-                transaction.addToBackStack(null)
-                transaction.commit()
+                supportFragmentManager.beginTransaction()
+                .replace(R.id.changeble, HomeFragment())
+                .addToBackStack(null)
+                .commit()
             }
             R.id.nav_tracker -> {
 
             }
             R.id.nav_weather -> {
-                manager.beginTransaction().addToBackStack(null).replace(R.id.changeble,WeatherFragment()).commit()
+                supportFragmentManager.beginTransaction()
+                    .addToBackStack(null)
+                    .replace(R.id.changeble, WeatherFragment())
+                    .commit()
             }
             R.id.nav_notes -> {
-            val transaction = manager.beginTransaction()
-                val fragment  = NotesFragment()
-                transaction.replace(R.id.changeble,fragment)
-                transaction.addToBackStack(null)
-                transaction.commit()
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.changeble, NotesFragment())
+                    .addToBackStack(null)
+                    .commit()
             }
             R.id.nav_room -> {
 
