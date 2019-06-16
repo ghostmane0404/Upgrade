@@ -60,7 +60,6 @@ class NotesFragment: Fragment(),NotesContract.NotesView {
         Log.d(TAG,"onViewCreated"+ noteViewModel.allNotes)
 
     }
-
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         Log.d(TAG,"onActivityCreated")
