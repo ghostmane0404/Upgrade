@@ -112,4 +112,7 @@ dependencies {
     // optional - Test helpers
     androidTestImplementation "androidx.work:work-testing:$work_version"
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0-alpha01'
+    implementation 'android.arch.persistence.room:rxjava2:1.0.0-alpha5'
+// Testing support
+    androidTestImplementation 'android.arch.core:core-testing:1.0.0-alpha5'
 }

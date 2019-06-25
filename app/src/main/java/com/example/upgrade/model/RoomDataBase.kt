@@ -18,7 +18,6 @@ import kotlinx.coroutines.launch
 
         fun getDatabase(context: Context,scope: CoroutineScope): NoteRoomDataBase {
             return INSTANCE ?: synchronized(this) {
-
                 val tempInstance = INSTANCE
                 if (tempInstance != null) {
                     return tempInstance
@@ -27,7 +26,7 @@ import kotlinx.coroutines.launch
                     val instance = Room.databaseBuilder(
                         context.applicationContext,
                         NoteRoomDataBase::class.java,
-                        "Word_database"
+                        "Note_database"
                     )
                         .addCallback(NoteDatabaseCallback(scope))
                         .build()
@@ -50,12 +49,11 @@ import kotlinx.coroutines.launch
             }
         }
         suspend fun populateDatabase(noteDao: NoteDAO) {
-            noteDao.deleteAll()
-
-            var note = Note("Hello","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
-            noteDao.insert(note)
-            note = Note("World!","etbtstrbsrtnbmtsrkot;rnbs;rjntslrnbttr")
-            noteDao.insert(note)
+            //noteDao.deleteAll()
+//            var note = Note("Hello","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+//            noteDao.insert(note)
+//            note = Note("World!","etbtstrbsrtnbmtsrkot;rnbs;rjntslrnbttr")
+//            noteDao.insert(note)
         }
     }
 

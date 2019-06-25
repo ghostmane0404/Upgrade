@@ -33,39 +33,39 @@
             android:layout_marginTop="10dp"
 
     >
-            <Button
-                    android:id="@+id/deleteNote"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="delete"
-                    android:paddingLeft="10dp"
-                    android:textColor="#808080"
-                    android:drawableStart="@drawable/ic_baseline_delete_24px"
-                    android:background="#ffffff"
-                    android:layout_margin="10dp"
-                    android:drawableTint="#808080"
-                    android:layout_weight="1.2"
-                    android:shadowRadius="50"
-                    android:layout_marginTop="5dp"
-                    android:layout_gravity="center_horizontal"
-            />
-            <Button
-                    android:id="@+id/saveNote"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="save"
-                    android:paddingLeft="60dp"
-                    android:drawableLeft="@drawable/ic_baseline_save_24px"
-                    android:background="#ffffff"
-                    android:layout_margin="5dp"
-                    android:drawableTint="#808080"
-                    android:textColor="#808080"
-                    android:layout_weight="2.75"
-                    android:shadowRadius="50"
-                    android:layout_marginTop="5dp"
-                    android:layout_gravity="center_horizontal"
+        <Button
+                android:id="@+id/deleteNote"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="delete"
+                android:paddingLeft="10dp"
+                android:textColor="#808080"
+                android:drawableStart="@drawable/ic_baseline_delete_24px"
+                android:background="#ffffff"
+                android:layout_margin="10dp"
+                android:drawableTint="#808080"
+                android:layout_weight="1.2"
+                android:shadowRadius="50"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_horizontal"
+        />
+        <Button
+                android:id="@+id/saveNote"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="save"
+                android:paddingLeft="60dp"
+                android:drawableLeft="@drawable/ic_baseline_save_24px"
+                android:background="#ffffff"
+                android:layout_margin="5dp"
+                android:drawableTint="#808080"
+                android:textColor="#808080"
+                android:layout_weight="2.75"
+                android:shadowRadius="50"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_horizontal"
 
-            />
+        />
 
     </LinearLayout>
 
