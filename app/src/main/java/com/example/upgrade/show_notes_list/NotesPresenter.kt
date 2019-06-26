@@ -1,6 +1,6 @@
-package com.example.upgrade.take_note
+package com.example.upgrade.show_notes_list
 
-class TakeNotePresenter:TakeNoteContract.TakeNotePresenter {
+class NotesPresenter:NotesContract.NotePresenter {
     override fun bind() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }

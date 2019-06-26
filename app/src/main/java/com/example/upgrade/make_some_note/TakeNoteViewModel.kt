@@ -1,13 +1,12 @@
-package com.example.upgrade.take_note
+package com.example.upgrade.make_some_note
 
 import android.app.Application
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.upgrade.model.Note
-import com.example.upgrade.model.NoteRoomDataBase
+import com.example.upgrade.database.NoteRoomDataBase
 import com.example.upgrade.repository.NoteRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi

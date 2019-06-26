@@ -1,4 +1,4 @@
-package com.example.upgrade.take_note
+package com.example.upgrade.make_some_note
 
 import androidx.lifecycle.ViewModel
 import android.app.Application

@@ -1,12 +1,13 @@
-package com.example.upgrade.model
+package com.example.upgrade.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import com.example.upgrade.model.Note
 
 @Dao
 interface NoteDAO{
     @Insert
-    suspend fun insert(note:Note)
+    suspend fun insert(note: Note)
 
     @Query("Delete FROM note_table")
     fun deleteAll()
@@ -24,5 +25,5 @@ interface NoteDAO{
     fun deletebyid(id:String)
 
     @Delete
-    fun delete(note:Note)
+    fun delete(note: Note)
 }

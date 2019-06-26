@@ -1,4 +1,4 @@
-package com.example.upgrade.take_note
+package com.example.upgrade.make_some_note
 
 import com.example.upgrade.LifeCycle
 

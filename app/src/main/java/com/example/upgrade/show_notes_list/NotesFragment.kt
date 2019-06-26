@@ -1,4 +1,4 @@
-package com.example.upgrade.notes
+package com.example.upgrade.show_notes_list
 
 import android.app.Activity
 import android.content.Context
@@ -17,12 +17,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.upgrade.adapters.NotesAdapter
 
 import com.example.upgrade.model.Note
-import com.example.upgrade.take_note.TakeNoteActivity
+import com.example.upgrade.make_some_note.TakeNoteActivity
 import kotlinx.android.synthetic.main.notes.*
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.activity_take_note.view.*
-import kotlinx.android.synthetic.main.note_item.view.*
 
 
 class NotesFragment : Fragment(), NotesContract.NotesView {

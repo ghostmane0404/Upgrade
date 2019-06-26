@@ -1,8 +1,6 @@
 package com.example.upgrade
 
 import android.os.Bundle
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
 import androidx.core.view.GravityCompat
 import androidx.appcompat.app.ActionBarDrawerToggle
 import android.view.MenuItem
@@ -12,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
 import com.example.upgrade.home.HomeFragment
-import com.example.upgrade.notes.NotesFragment
+import com.example.upgrade.show_notes_list.NotesFragment
 import com.example.upgrade.weather.WeatherFragment
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {

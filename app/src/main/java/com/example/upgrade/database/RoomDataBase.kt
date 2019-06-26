@@ -1,17 +1,19 @@
-package com.example.upgrade.model
+package com.example.upgrade.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
+import com.example.upgrade.dao.NoteDAO
+import com.example.upgrade.model.Note
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 @Database(entities = [Note::class],version = 1)
  abstract  class NoteRoomDataBase: RoomDatabase() {
-    abstract fun noteDao():NoteDAO
+    abstract fun noteDao(): NoteDAO
     companion object {
         @Volatile
         private var INSTANCE: NoteRoomDataBase? = null

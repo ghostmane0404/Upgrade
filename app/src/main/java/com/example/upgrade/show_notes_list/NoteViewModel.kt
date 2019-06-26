@@ -1,11 +1,11 @@
-package com.example.upgrade.notes
+package com.example.upgrade.show_notes_list
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.example.upgrade.model.Note
-import com.example.upgrade.model.NoteRoomDataBase
+import com.example.upgrade.database.NoteRoomDataBase
 import com.example.upgrade.repository.NoteRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

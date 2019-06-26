@@ -1,6 +1,6 @@
-package com.example.upgrade.weather.sixteen_days
+package com.example.upgrade.make_some_note
 
-class SxtnPresenter:SxtnContract.SxtnPresenter {
+class TakeNotePresenter:TakeNoteContract.TakeNotePresenter {
     override fun bind() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }

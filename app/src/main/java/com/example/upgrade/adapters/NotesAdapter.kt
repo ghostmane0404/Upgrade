@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
 import com.example.upgrade.model.Note
-import com.example.upgrade.take_note.TakeNoteActivity
+import com.example.upgrade.make_some_note.TakeNoteActivity
 import kotlinx.android.synthetic.main.note_item.view.*
 
 
