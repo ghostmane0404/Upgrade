@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/CurrentWeatherFragment"
+        android:id="@+id/tab1"
         android:icon="@drawable/ic_navigation_black_24dp"
         android:title="Today"/>
     <item
-            android:id="@+id/FutureWeatherFragment"
+            android:id="@+id/tab2"
             android:icon="@drawable/ic_event_black_24dp"
             android:title="7 day forecast"/>
     <item
-            android:id="@+id/WeatherSettings"
+            android:id="@+id/tab3"
             android:icon="@drawable/ic_brightness_high_black_24dp"
             android:title="Settings"/>
 

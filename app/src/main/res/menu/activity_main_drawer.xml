@@ -20,9 +20,6 @@
                 android:id="@+id/nav_notes"
                 android:icon="@drawable/ic_menu_manage"
                 android:title="@string/menu_notes"/>
-        <item
-                android:id="@+id/nav_room"
-                android:icon="@drawable/ic_menu_share"
-                android:title="@string/menu_room"/>
+
     </group>
 </menu>

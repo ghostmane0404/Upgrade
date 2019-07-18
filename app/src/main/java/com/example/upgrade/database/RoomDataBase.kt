@@ -6,6 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.example.upgrade.dao.NoteDAO
+import com.example.upgrade.dao.WeatherDAO
 import com.example.upgrade.model.Note
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -14,6 +15,7 @@ import kotlinx.coroutines.launch
 @Database(entities = [Note::class],version = 1)
  abstract  class NoteRoomDataBase: RoomDatabase() {
     abstract fun noteDao(): NoteDAO
+    abstract fun weatherDao():WeatherDAO
     companion object {
         @Volatile
         private var INSTANCE: NoteRoomDataBase? = null
@@ -28,7 +30,7 @@ import kotlinx.coroutines.launch
                     val instance = Room.databaseBuilder(
                         context.applicationContext,
                         NoteRoomDataBase::class.java,
-                        "Note_database"
+                        "Room_database"
                     )
                         .addCallback(NoteDatabaseCallback(scope))
                         .build()

@@ -1,5 +1,6 @@
 package com.example.upgrade
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.core.view.GravityCompat
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -11,7 +12,7 @@ import androidx.appcompat.widget.Toolbar
 import android.view.Menu
 import com.example.upgrade.home.HomeFragment
 import com.example.upgrade.show_notes_list.NotesFragment
-import com.example.upgrade.weather.WeatherFragment
+import com.example.upgrade.weather.WeatherActivity
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -75,10 +76,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             }
             R.id.nav_weather -> {
-                supportFragmentManager.beginTransaction()
-                    .addToBackStack(null)
-                    .replace(R.id.changeble, WeatherFragment())
-                    .commit()
+                startActivity(Intent(this, WeatherActivity::class.java))
             }
             R.id.nav_notes -> {
                 supportFragmentManager.beginTransaction()
@@ -86,9 +84,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     .addToBackStack(null)
                     .commit()
             }
-            R.id.nav_room -> {
 
-            }
         }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         drawerLayout.closeDrawer(GravityCompat.START)

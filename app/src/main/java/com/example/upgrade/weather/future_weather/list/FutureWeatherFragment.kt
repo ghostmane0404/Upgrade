@@ -1,4 +1,4 @@
-package com.example.upgrade.weather.current
+package com.example.upgrade.weather.future_weather.list
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -9,24 +9,24 @@ import android.view.ViewGroup
 
 import com.example.upgrade.R
 
-class CurrentWeatherFragment : Fragment() {
+class FutureWeatherFragment : Fragment() {
 
     companion object {
-        fun newInstance() = CurrentWeatherFragment()
+        fun newInstance() = FutureWeatherFragment()
     }
 
-    private lateinit var viewModel: CurrentWeatherViewModel
+    private lateinit var viewModel: FutureWeatherViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.current_weather_fragment, container, false)
+        return inflater.inflate(R.layout.future_weather_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(CurrentWeatherViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(FutureWeatherViewModel::class.java)
         // TODO: Use the ViewModel
     }
 
